@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Work Sans', sans-serif;
     color: hsl(292, 42%, 14%);
     background-image: url('assets/images/background-pattern-desktop.svg');
     background-repeat: repeat-x;
@@ -20,7 +20,7 @@ body {
 
 #accordion {
     background-color: hsl(0, 0%, 100%);
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 2rem;
     border-radius: 3%;
     height: 50vh;
     width: 50vh;
@@ -38,7 +38,6 @@ body {
 
 ul {
     list-style-type: none;
-    justify-content: space-between;
 }
 
 li {
