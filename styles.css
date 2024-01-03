@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +10,16 @@
     --white: hsl(0, 0%, 100%);
     --light-pink: hsl(275, 100%, 97%);
     --grayish-purple: hsl(292, 16%, 49%);
+    --purple: #AD28EB;
     --dark-purple: hsl(292, 42%, 14%);
+
+    --ff-main: 'Work Sans', sans-serif;
 }
 
 body {
-    font-family: 'Work Sans', sans-serif;
-    color: hsl(292, 42%, 14%);
+    height: 100%;
+    font-family: var(--ff-main);
+    color: var(--dark-purple);
     background-image: url('assets/images/background-pattern-desktop.svg');
     background-repeat: repeat-x;
     background-color: var(--light-pink);
@@ -27,40 +33,82 @@ body {
 }
 
 #accordion {
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--white);
     padding: 2.5rem 2rem;
-    border-radius: 3%;
-    width: 50vh;
+    margin: 1rem;
+    border-radius: .5rem;
+    max-width: 600px;
 }
 
-.flex-row {
+.title-flex-row {
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
 .flex-col {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.plus-sign {
+    width: 25px;
+    height: 26px;
+}
+
+.minus-sign {
+    width: 25px;
+    height: 26px;
 }
 
 ul {
     list-style-type: none;
 }
 
-li .flex-row {
+.list-flex-row {
     display: flex;
     align-items: center;
-    font-weight: 600;
     justify-content: space-between;
-    padding: .5rem;
+    font-weight: 600;
 }
 
 h1 {
     font-size: 3rem;
 }
 
-p {
+
+
+
+.list-answer {
     color: var(--grayish-purple);
     font-weight: 400;
-    font-size: .9rem
+    font-size: .9rem;
+}
+
+li {
+    border-color: hsl(0, 0%, 90%);
+    border-bottom-style: solid;
+    padding-bottom: 1rem;
+}
+
+ul :nth-last-child(1) {
+    border-bottom-style: none;
+    padding-bottom: 0;
+}
+
+li :hover {
+    cursor: pointer;
+}
+
+li :hover h4 {
+    color: var(--purple);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
