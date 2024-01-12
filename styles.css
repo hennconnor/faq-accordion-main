@@ -20,13 +20,12 @@
 }
 
 body {
-    height: 100%;
     font-family: var(--ff-main);
     color: var(--dark-purple);
     background-image: url('assets/images/background-pattern-desktop.svg');
+    background-size: contain;
     background-repeat: repeat-x;
     background-color: var(--light-pink);
-
 }
 
 h1 {
@@ -35,29 +34,31 @@ h1 {
 
 h4 {
     font-weight: var(--fw-600);
-    margin-right: 1.4em;
+    margin-right: 1.4rem;
 }
 
 #accordion-container {
-    height: 100vh;
     display: grid;
     place-items: center;
+    width: 100%;
+
 }
 
 #accordion {
     background-color: var(--white);
-    padding: 2em;
-    margin: 1em;
-    border-radius: 1em;
-    max-width: 600px;
+    padding: 1.8rem;
+    margin: 8rem auto;
+    border-radius: 1rem;
     box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.10);
+    width: 90%;
+    max-width: 535px;
 }
 
 .title-flex-row {
     display: flex;
     align-items: center;
-    gap: .85em;
-    font-size: 1.725rem;
+    gap: 1rem;
+    font-size: 1.4rem;
     letter-spacing: 2px;
     font-weight: var(--fw-700);
 }
@@ -65,7 +66,7 @@ h4 {
 .flex-col {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1rem;
 }
 
 .plus-sign {
@@ -87,17 +88,17 @@ ul {
     align-items: center;
     justify-content: space-between;
     font-weight: var(--fw-600);
-    letter-spacing: .5px;
-    font-size: 1.1rem;
-    margin: .6em auto;
+    letter-spacing: .2px;
+    font-size: 1rem;
+    margin: .3rem auto;
 }
 
 .list-answer {
     color: var(--grayish-purple);
     font-weight: 400;
-    font-size: 1rem;
+    font-size: .9rem;
     line-height: 1.5;
-    margin: 1.2em auto;
+    margin: 1rem auto;
     font-weight: var(--fw-400);
 }
 
@@ -105,7 +106,7 @@ li {
     border-color: hsl(0, 0%, 90%);
     border-bottom-style: solid;
     border-width: 1px;
-    padding-bottom: .7em;
+    padding-bottom: .7rem;
 }
 
 ul :nth-last-child(1) {
@@ -123,4 +124,10 @@ li :hover h4 {
 
 .hide {
     display: none;
+}
+
+@media (max-width: 450px) {
+    body {
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+    }
 }
